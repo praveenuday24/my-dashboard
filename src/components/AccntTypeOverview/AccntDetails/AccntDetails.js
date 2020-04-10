@@ -2,7 +2,7 @@ import React ,{Component}from "react";
 
 const AccntDetails =({accntDetailsData})=>{
     console.log(accntDetailsData);
-    let details=accntDetailsData.Contributions;
+    let details=accntDetailsData.Exchange;
 
         return(
             <div>
