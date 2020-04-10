@@ -1,10 +1,11 @@
-import React ,{Component}from "react";
+import React from "react";
 
 const AccntDetails =({accntDetailsData})=>{
-    console.log(accntDetailsData);
+    // console.log(accntDetailsData);
     let details=accntDetailsData.Exchange;
 
         return(
+            <div>
             <div>
                 {details.map(item=>
                     <div key={item.index} className="ItemPage-item">
@@ -18,6 +19,8 @@ const AccntDetails =({accntDetailsData})=>{
                             <p>{item.Status}</p>
                     </div>)
         }
+            </div>
+            <div>View Contribution Activity</div>
             </div>
         )
     }
