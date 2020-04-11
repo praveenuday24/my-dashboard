@@ -17,7 +17,7 @@ class AccountDashboard extends Component{
     render(){
     return(
         <AccountDashboardWrapper>
-            <AccntHeader></AccntHeader>
+            {/* <AccntHeader></AccntHeader> */}
             <SectionOverview></SectionOverview>
             <AccntViewSection></AccntViewSection>
             <AccntBalanaceTypeOverview></AccntBalanaceTypeOverview>

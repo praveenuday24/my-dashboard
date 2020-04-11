@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 
-const AccntHeader=()=>{
-    return(
+// const AccntHeader=()=>{
+//     return(
 
-    )
-}
+//     )
+// }
 
-export default AccntHeader;
+// export default AccntHeader;
