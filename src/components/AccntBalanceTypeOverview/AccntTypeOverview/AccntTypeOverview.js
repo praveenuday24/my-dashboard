@@ -1,8 +1,15 @@
 import React,{Component} from "react";
-import AccntType from "../AccntTypeOverview/AccntType/AccntType";
-import {accnttypeData} from "../../data/AccntTypeData";
-import {accntDetailsData} from "../../data/AccntDetailsData";
-import AccntDetails from "../AccntTypeOverview/AccntDetails/AccntDetails";
+import AccntType from "./AccntType/AccntType";
+import {accnttypeData} from "../../../data/AccntTypeData";
+import {accntDetailsData} from "../../../data/AccntDetailsData";
+import AccntDetails from "./AccntDetails/AccntDetails";
+import styled from "styled-components";
+
+const AccntTypesWrapper=styled.div`
+background:#ffffff;
+margin-left:20px;
+padding:0;
+`;
 
 
 
@@ -15,10 +22,10 @@ class AccntTypeOverview extends Component{
 
     render(){
         return(
-            <div>
+            <AccntTypesWrapper className="col-7">
                 <AccntType accntTypeData={this.state.accntTypeData}></AccntType>
                 <AccntDetails accntDetailsData={this.state.accntDetailsData}></AccntDetails>
-            </div>
+            </AccntTypesWrapper>
 
         )
     }

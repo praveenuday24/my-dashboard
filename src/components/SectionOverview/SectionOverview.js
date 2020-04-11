@@ -1,7 +1,17 @@
 import React,{Component} from "react";
-import Logo from "../Logo/Logo";
-import Sections from "../Sections/Sections";
+import Logo from "./Logo/Logo";
+import Sections from "./Sections/Sections";
 import {sectionData} from "../../data/sectiondata";
+import styled  from 'styled-components';
+
+const SectionOverviewWrapper = styled.div`
+    display:flex;
+    background:#ffffff;
+    padding:5px 140px 14px;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eaeaea;
+`;
 
 class SectionOverview extends Component{
 
@@ -11,10 +21,10 @@ class SectionOverview extends Component{
 
     render(){
         return(
-            <div>
+            <SectionOverviewWrapper >
                 <Logo></Logo>
                 <Sections sectionlist={this.state.sectionItems}></Sections>
-            </div>
+            </SectionOverviewWrapper>
         )
     }
 }
