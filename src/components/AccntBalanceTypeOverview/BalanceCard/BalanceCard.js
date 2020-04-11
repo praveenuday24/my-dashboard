@@ -39,6 +39,9 @@ const BalanceCardWrapper=styled.div`
   background-color: #ffffff;
   height:172px;
   padding:20px 0 0 30px;
+  &:nth-child(2){
+    margin-bottom:0;
+  }
   `
   ;
 

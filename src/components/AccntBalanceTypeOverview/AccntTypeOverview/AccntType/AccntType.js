@@ -5,6 +5,7 @@ const AccntTypeWrapper=styled.ul`
 display:flex;
 padding:0;
 border-top:solid 1px #f1f1f1;
+margin:0;
 `;
 
 const AccntTypeList=styled.li`
