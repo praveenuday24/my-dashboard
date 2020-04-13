@@ -14,10 +14,14 @@ class AccntBalanaceTypeOverview extends Component{
         balancedata:balancedata
     }
 
+    
+
     render(){
         return(
             <AccntBalanaceTypeOverviewwrapper className="row">
-                <BalanceCard  balancedata={this.state.balancedata}></BalanceCard>
+                <BalanceCard  
+                balancedata={this.state.balancedata}
+                ></BalanceCard>
                 <AccntTypeOverview></AccntTypeOverview>
             </AccntBalanaceTypeOverviewwrapper>
         )

@@ -17,13 +17,23 @@ class AccntTypeOverview extends Component{
 
     state={
          accntTypeData:accnttypeData.AccntTypes,
-         accntDetailsData:accntDetailsData
+         accntDetailsData:accntDetailsData,
+         accntActiveTab:1
+    }
+    handleAccntTabChange=(tab_id)=>{
+        this.setState({
+            accntActiveTab:tab_id
+        })
     }
 
     render(){
         return(
             <AccntTypesWrapper className="col-7">
-                <AccntType accntTypeData={this.state.accntTypeData}></AccntType>
+                <AccntType 
+                    accntTypeData={this.state.accntTypeData}
+                    accntActiveTab={this.state.accntActiveTab}
+                    onTabChange={this.handleAccntTabChange}>
+                </AccntType>
                 <AccntDetails accntDetailsData={this.state.accntDetailsData}></AccntDetails>
             </AccntTypesWrapper>
 

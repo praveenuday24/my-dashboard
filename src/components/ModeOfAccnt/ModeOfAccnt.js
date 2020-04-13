@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./ModeOfAccnt.css";
 
 
 const ModeOfAccntwrapper=styled.ul`
@@ -20,15 +21,18 @@ font-weight: bold;
 font-stretch: condensed;
 letter-spacing: 0.5px;
 color: #ffffff;
+cursor:pointer;
 `;
 
 
-const ModeOfAccnt =({modedata})=>{
+
+const ModeOfAccnt =({modedata,accntActiveTab,onTabChange})=>{
     return(
         <ModeOfAccntwrapper className="ItemPage-items">
         {modedata.map(item=>
-        <ModeList key={item.id} className="ItemPage-item">
-            {item.name} >
+        <ModeList key={item.id} className={`ItemPage-item ${accntActiveTab===item.id && 'AccntModeselected'}`}>
+            <div onClick={()=>onTabChange(item.id)}>{item.name} </div>
+
         </ModeList>
         )}
     </ModeOfAccntwrapper>

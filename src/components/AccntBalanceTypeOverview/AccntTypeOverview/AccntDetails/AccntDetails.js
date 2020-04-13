@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const AccntdetailsWrapper=styled.div`
-padding:19px 0px 17px 30px;
+padding:0px 0px 17px 30px;
 `;
 
 const GiftId =styled.p`
@@ -33,7 +33,7 @@ const GiftId =styled.p`
 
   const TypeDetails=styled.div`
   display:flex;
-  padding-bottom:29px;
+  padding-bottom:17px;
   `;
 
   const DetailsCaption=styled.div`
@@ -79,13 +79,39 @@ const GiftId =styled.p`
     margin-right:113px;
   }`;
 
+  const AccntDetailsFullWrap=styled.div`
+  height:240px;
+  overflow:auto;
+  padding-top:20px;
+  &::-webkit-scrollbar-track
+{
+	
+	border-radius: 3px;
+	background-color: transparent;
+}
+
+&::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: transparent;
+}
+
+&::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color:transparent;
+}
+
+  `;
+
 const AccntDetails =({accntDetailsData})=>{
     // console.log(accntDetailsData);
-    let details=accntDetailsData.Exchange;
+    let details=accntDetailsData.Contributions;
 
         return(
             <AccntdetailsWrapper>
-            <div>
+            <AccntDetailsFullWrap>
                 {details.map(item=>
                     <AccntDeatilsInnerWarp  key={item.index} >
                             <GiftId>{`Gift ID: ${item.id}`}</GiftId>
@@ -120,7 +146,7 @@ const AccntDetails =({accntDetailsData})=>{
                             </TypeDetails>                            
                     </AccntDeatilsInnerWarp>)
         }
-            </div>
+            </AccntDetailsFullWrap>
             <Activity>View Contribution Activity</Activity>
             </AccntdetailsWrapper>
         )

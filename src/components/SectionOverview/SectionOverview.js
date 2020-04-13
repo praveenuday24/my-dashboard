@@ -16,14 +16,25 @@ const SectionOverviewWrapper = styled.div`
 class SectionOverview extends Component{
 
     state={
-        sectionItems:sectionData
+        sectionItems:sectionData,
+        activeTab:0
+    }
+
+    handleTabChange=(id)=>{
+        this.setState({
+            activeTab: id
+        })
     }
 
     render(){
         return(
             <SectionOverviewWrapper >
                 <Logo></Logo>
-                <Sections sectionlist={this.state.sectionItems}></Sections>
+                <Sections 
+                    sectionlist={this.state.sectionItems} 
+                    activeTab={this.state.activeTab}
+                    onTabChange={this.handleTabChange}
+                ></Sections>
             </SectionOverviewWrapper>
         )
     }
